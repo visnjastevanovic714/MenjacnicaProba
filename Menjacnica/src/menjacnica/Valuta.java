@@ -12,6 +12,8 @@ public class Valuta {
 		return skracenica;
 	}
 	public void setSkracenica(String skracenica) {
+		if(skracenica==null || skracenica.isEmpty())
+			throw new RuntimeException("Greska pri unosu skracenice");
 		this.skracenica = skracenica;
 	}
 	public LinkedList<Kurs> getKursevi() {
@@ -24,6 +26,8 @@ public class Valuta {
 		return imeValute;
 	}
 	public void setImeValute(String imeValute) {
+		if(imeValute==null || imeValute.isEmpty())
+			throw new RuntimeException("Greska pri unosu imena valute");
 		this.imeValute = imeValute;
 	}
 	@Override

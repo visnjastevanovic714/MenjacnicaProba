@@ -13,24 +13,32 @@ public class Kurs {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
+		if(prodajniKurs<=0)
+			throw new RuntimeException("Greska pri unosu prodajnog kursa");
 		this.prodajniKurs = prodajniKurs;
 	}
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
+		if(srednjiKurs<=0)
+		throw new RuntimeException("Greska pri unosu srednjeg kursa");
 		this.srednjiKurs = srednjiKurs;
 	}
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
+		if(kupovniKurs<=0)
+		throw new RuntimeException("Greska pri unosu kupovnog kursa");
 		this.kupovniKurs = kupovniKurs;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum==null)
+			throw new RuntimeException("Greska pri unosu datuma");
 		this.datum = datum;
 	}
 	@Override
